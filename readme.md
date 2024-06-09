@@ -72,6 +72,9 @@ gather_facts is the module
 
 how can i run the tasks if the machines are different like ubuntu, centos etc..
 
+{{ansible_distribution}}---- it is a predefined variable in ansible which says which OS type it is
+ 
+ if i define gather_facts is false then it will the fetch the machine details by default it is always true
 
 
 

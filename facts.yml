@@ -3,4 +3,4 @@
   tasks:
     - name: name of my OS
       ansible.builtin.debug:
-        msg: "the machine os is {{ansible_distribution}}"
+        msg: "the machine os is {{ansible_distribution}}"  # this is a pre-defined varable in ansible

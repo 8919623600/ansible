@@ -1,0 +1,9 @@
+- name: install nginx
+  hosts: all
+  vars: 
+     package: nginx
+  tasks: 
+    - name: Install ntpdate
+      ansible.builtin.package:
+        name: "{{package}}"
+        state: present  
