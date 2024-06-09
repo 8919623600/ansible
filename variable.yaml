@@ -14,3 +14,9 @@
       vars: 
         URL: facebook.com          # this is task level variable
         my_college: mgm
+      
+    - name: printing my city name
+      ansible.builtin.debug:
+        msg: "{{city}}"
+      vars:
+        city: Bhubaneswar the city
