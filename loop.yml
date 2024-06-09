@@ -13,7 +13,7 @@
     - name: Install packages in loops
       ansible.builtin.package:
         name:
-          - wget
+          - wget                         # by this loop the packages get installed at one time
           - jq
           - nginx
           - httpd

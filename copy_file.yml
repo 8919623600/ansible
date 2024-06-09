@@ -1,0 +1,8 @@
+- name: Copy file from local to remote
+  hosts: all
+
+  tasks:
+    - name: Copy file to remote location
+      copy:
+        src: readme.md   # Path to the local file
+        dest: /home
