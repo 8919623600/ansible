@@ -14,7 +14,7 @@
         EXITCODE: "{{OUT.rc}}"
 
     - name: printing the exit code
-      nsible.builtin.debug:
+      ansible.builtin.debug:
         msg: "the code is {{EXITCODE}}"
       
 
