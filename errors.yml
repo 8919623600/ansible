@@ -2,7 +2,7 @@
   hosts: all 
   tasks:
     - name: Check Tomcat Is Running or Not 
-      ansible.builtin.shell: ps -ef | grep java       
+      ansible.builtin.shell: ps -ef | grep java | grep -v grep      
       register: OUT                           
       ignore_errors: true            # when error comes it will ignore the task and will jump to the new task
 
