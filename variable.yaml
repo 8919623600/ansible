@@ -10,7 +10,7 @@
 
     - name: printing variable
       ansible.builtin.debug:
-        msg: "the url that is declared on variable is {{URL}} and i have studied in {{my_school}}"
+        msg: "the url that is declared on variable is {{URL}} and i have studied in {{my_college}}"
       vars: 
         URL: facebook.com          # this is task level variable
-        
+        my_college: mgm
