@@ -1,0 +1,21 @@
+- name: print uptime of machine and capture it in a file
+  hosts: all
+  tasks:
+    - name: Running uptime time 
+      ansible.builtin.shell: uptime       # SHELL module won't offer the output by default on screen, if you want you can register the output. 
+      register: OUT 
+
+    - name: Printing uptime time 
+      ansible.builtin.debug:
+        msg: "uptime is {{OUT.stdout}}" 
+    
+    - name: Capturing the bash exit code 
+      ansible.builtin.set_fact:
+        EXITCODE: "{{OUT.rc}}"
+
+    - name: printing the exit code
+      nsible.builtin.debug:
+        msg: "the code is {{EXITCODE}}"
+      
+
+    
