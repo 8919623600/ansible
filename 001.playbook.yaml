@@ -9,6 +9,8 @@
       ansible.builtin.debug:
         msg: "hello is am your task2 from ansible"
 
+## multiple plays can also be decaled on a single playbook
+
 - name: play2
   hosts: all
   tasks:
@@ -19,3 +21,16 @@
     - name: task2 for play2
       ansible.builtin.debug:
         msg: "hello is am your task2 from ansible"
+
+- name: play3
+  hosts: all
+  tasks:
+     - name: task1 from play3
+       ansible.builtin.debug:
+        msg: "namaskar is am your task1 from ansible"
+
+     - name: task2 for play3
+       ansible.builtin.debug:
+        msg: "sasriakaal"
+        
+       
