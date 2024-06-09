@@ -5,4 +5,4 @@
     - name: Copy file to remote location
       copy:
         src: readme.md   # Path to the local file
-        dest: /home/user/centos
+        dest: /home/centos
