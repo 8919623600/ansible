@@ -5,3 +5,7 @@
       ansible.builtin.shell: ps -ef | grep java | grep -v grep      
       register: OUT 
       ignore_errors: true
+
+    - name: above error ignored
+      ansible.builtin.debug: 
+        msg: "the above error is ignore"
