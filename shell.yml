@@ -16,6 +16,15 @@
     - name: printing the exit code
       ansible.builtin.debug:
         msg: "the code is {{EXITCODE}}"
+
+    - name: get the directory
+      ansible.builtin.shell: pwd
+      register: dir
+
+    - name: print the directory
+      ansible.builtin.debug:
+       msg: "i am at {{dir}}"
+
       
 
     
