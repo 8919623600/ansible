@@ -8,3 +8,14 @@
         - 10
         - 20
         - 30 
+      
+    - name: Install packages in loops
+      ansible.builtin.package:
+        name:
+          - wget
+          - jq
+          - nginx
+          - httpd
+        state: latest
+      
+      
