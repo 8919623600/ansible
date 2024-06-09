@@ -16,6 +16,7 @@
           - wget
           - jq
           - nginx
+          - httpd
         state: latest
       
       
