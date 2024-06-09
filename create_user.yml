@@ -12,11 +12,11 @@
           msg: "userName is {{OUTPUT.stdout}}" 
   
     - name: Creating roboshop useraccount
-      ansible.builtin.user:
+      ansible.builtin.user:         # it will create the user
         name: robot
 
-    - name: Remove the user 'robot'
-      ansible.builtin.user:
-        name: robot
-        state: absent
-        remove: yes 
+    # - name: Remove the user 'robot'
+    #   ansible.builtin.user:        
+    #     name: robot
+    #     state: absent       # it will delete the user
+    #     remove: yes 
