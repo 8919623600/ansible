@@ -23,5 +23,5 @@
 
     - name: printing my city name
       ansible.builtin.debug:
-        msg: "{local_variable}}"      # if we dont declare the variable here then we can also declare it from command line
+        msg: "{{local_variable}}"      # if we dont declare the variable here then we can also declare it from command line
      
