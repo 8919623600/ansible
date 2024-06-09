@@ -17,6 +17,11 @@
       
     - name: printing my city name
       ansible.builtin.debug:
-        msg: "{city}}
+        msg: "{city}}"      # if the msg is only variable then it should be declared inside double quotes
       vars:
         city: Bhubaneswar the smart city
+
+    - name: printing my city name
+      ansible.builtin.debug:
+        msg: "{local_variable}}"      # if we dont declare the variable here then we can also declare it from command line
+     
