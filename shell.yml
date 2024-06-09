@@ -11,7 +11,7 @@
     
     - name: Capturing the bash exit code 
       ansible.builtin.set_fact:
-        EXITCODE: "{{OUT.rc}}"
+        EXITCODE: "{{OUT.rc}}" 
 
     - name: printing the exit code
       ansible.builtin.debug:
@@ -23,7 +23,7 @@
 
     - name: print the directory
       ansible.builtin.debug:
-       msg: "i am at {{dir.stdout}}"
+       msg: "i am at {{dir.stdout}}"  # stdout will take the particular thing
 
       
 
