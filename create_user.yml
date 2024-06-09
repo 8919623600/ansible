@@ -4,12 +4,12 @@
   tasks: 
     - name: Checking user
       ansible.builtin.shell: id       
-      register: OUT         
+      register: OUTPUT         
       become_user: centos               
 
     - name: Printing user details
       ansible.builtin.debug:    
-          msg: "userName is {{OUT.stdout}}" 
+          msg: "userName is {{OUTPUT.stdout}}" 
   
     - name: Creating roboshop useraccount
       ansible.builtin.user:
