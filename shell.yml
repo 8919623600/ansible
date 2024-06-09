@@ -23,7 +23,7 @@
 
     - name: print the directory
       ansible.builtin.debug:
-       msg: "i am at {{dir}}"
+       msg: "i am at {{dir.stdout}}"
 
       
 
