@@ -1,9 +1,10 @@
 - name: install nginx
   hosts: all
+  remote_user: centos
   vars: 
      package: nginx
   tasks: 
-    - name: Install ntpdate
+    - name: Install nginx
       ansible.builtin.package:
         name: "{{package}}"
         state: present  
