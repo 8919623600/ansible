@@ -22,5 +22,5 @@
       ansible.builtin.debug:
         msg: Bar is defined
       vars:
-        bar: true
+ #       bar: true                    # if i uncomment the bar then this will execute
       when: bar is defined            # this condition will not executed because bar is not defined
