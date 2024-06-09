@@ -8,3 +8,14 @@
     - name: task2 for play1
       ansible.builtin.debug:
         msg: "hello is am your task2 from ansible"
+
+- name: play2
+  hosts: all
+  tasks:
+    - name: task1 for play2
+      ansible.builtin.debug:
+        msg: "hello is am your task1 from ansible"
+
+    - name: task2 for play2
+      ansible.builtin.debug:
+        msg: "hello is am your task2 from ansible"
