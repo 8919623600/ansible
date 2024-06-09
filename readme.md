@@ -29,3 +29,37 @@ here -i is inventory -m is module
 
 To do automated way is ansible playbook
 
+Ansible tower an version with UI
+
+A key with value is called dictionary
+ex - name: ansible
+
+A key with multiple values is called list
+ex :-
+courses:
+    - devops
+    - aws
+    - gcp
+
+A key with multi key value pair is called map
+ex:-
+martin:
+    name: martic dsouza
+    job: developer
+    skill: python
+
+# What is a Playbook ?
+    ``` scripts in ansible are referred as playbooks```
+
+A playbook is a list of plays!!!
+A play is a list of tasks!!!
+A task is nothing an aciton that you want ansible to perform
+
+Ansible expected the playbooks to have .yaml or yml as extensions
+
+A playbook is a list of plays and a play is a list of tasks
+
+
+
+
+
