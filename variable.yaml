@@ -1,9 +1,12 @@
 - name: playing with variable
   hosts: all
-  vars: 
+  vars:                   # this is play variable declaration
     URL: google.com
     my_school: bjem
   tasks: 
     - name: printing variable
       ansible.builtin.debug:
+        msg: "the url that is declared on variable is {{URL}} and i have studied in {{my_school}}"
+      vars: 
+        URL: facebook.com          # this is task level variable
         msg: "the url that is declared on variable is {{URL}} and i have studied in {{my_school}}"
