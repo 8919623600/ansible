@@ -59,6 +59,23 @@ Ansible expected the playbooks to have .yaml or yml as extensions
 
 A playbook is a list of plays and a play is a list of tasks
 
+# variables
+
+priorities os variables declarations
+the priority of variable will be first cli then task level then play level
+cli > tasks > play 
+
+# facts
+facts is noithing but properties of VM's
+ex - ansible all -i inv -e ansible_user=centos -e ansible_password=DevOps321 -m gather_facts
+gather_facts is the module
+
+how can i run the tasks if the machines are different like ubuntu, centos etc..
+
+
+
+
+
 
 
 

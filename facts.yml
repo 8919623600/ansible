@@ -1,0 +1,6 @@
+- name: identifying OS
+  hosts: all
+  tasks:
+    - name: name of my OS
+      ansible.builtin.debug:
+        msg: "the machine os is {{ansible_distribution}}"
