@@ -2,7 +2,8 @@
   hosts: all
   vars: 
     URL: google.com
+    my_school: bjem
   tasks: 
     - name: printing variable
       ansible.builtin.debug:
-        msg: "the url that is declared on variable is {{URL}}"
+        msg: "the url that is declared on variable is {{URL}} and i have studied in {{my_school}}"
