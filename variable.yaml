@@ -17,6 +17,6 @@
       
     - name: printing my city name
       ansible.builtin.debug:
-        msg: "{{city}}"
+        msg: "{city}}
       vars:
-        city: Bhubaneswar the city
+        city: Bhubaneswar the smart city
