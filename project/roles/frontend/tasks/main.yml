@@ -1,0 +1,38 @@
+- name: Installing Nginx
+  ansible.builtin.package:
+    name: nginx 
+    state: present 
+
+- name: Download and extracting {{COMPONENT}}
+  ansible.builtin.unarchive:
+    src: https://github.com/stans-robot-project/{{COMPONENT}}/archive/main.zip
+    dest: /tmp 
+    remote_src: yes                                    # Download will happen on the top of the remote server 
+
+- name: Performing cleanup 
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: absent
+
+- name: Copying {{COMPONENT}}
+  ansible.builtin.copy:
+    src: /tmp/frontend-main/static/                    # Location of the file on the machine where you're running this cript
+    dest: /usr/share/nginx/html/                       # Location of the file where you want to copy this to remote server.
+    remote_src: yes
+
+- name: Copying {{COMPONENT}} proxy file
+  ansible.builtin.template:
+    src: roboshop.conf                
+    dest: /etc/nginx/default.d/roboshop.conf         
+
+- name: Copying nginx config file
+  ansible.builtin.template:
+    src: nginx.conf                
+    dest: /etc/nginx/nginx.conf    
+
+- name: Starting nginx 
+  ansible.builtin.systemd:
+    name: nginx 
+    state: restarted
+    enabled: true
+    daemon_reload: yes
