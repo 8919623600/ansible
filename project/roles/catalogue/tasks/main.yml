@@ -8,7 +8,7 @@
 
 - name: Add {{APPUSER}} 
   ansible.builtin.user:
-    name: {{APPUSER}}
+    name: "{{APPUSER}}"
 
 - name: Download and extracting {{COMPONENT}}
   ansible.builtin.unarchive:
