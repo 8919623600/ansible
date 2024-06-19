@@ -1,4 +1,4 @@
 COMPONENT: frontend
 LOG_LOCATION: "/var/log/nginx/access.log"
 LOGTYPE: raw 
-ENV: dev
+ENV: dev 
