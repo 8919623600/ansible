@@ -76,7 +76,7 @@ how can i run the tasks if the machines are different like ubuntu, centos etc..
  
  if i define gather_facts is false then it will the fetch the machine details by default it is always true
 
-
+alias a='git pull ; ansible-playbook -i all -e ansible_user=centos -e ansible_password=Dev -e COMPONENT=frontend roboshop.yml'
 
 
 
