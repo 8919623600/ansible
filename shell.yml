@@ -5,6 +5,9 @@
       ansible.builtin.shell: uptime       # SHELL module won't offer the output by default on screen, if you want you can register the output. 
       register: OUT 
 
+    - debug:
+        msg: "{{OUT}}"
+
     - name: Printing uptime time 
       ansible.builtin.debug:
         msg: "uptime is {{OUT.stdout}}" 
