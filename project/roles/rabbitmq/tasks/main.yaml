@@ -30,6 +30,12 @@
     name: rabbitmq-server
     state: present
 
+- name: Starting RabbitMQ 
+  ansible.builtin.shell: sudo systemctl start rabbitmq-server.service
+
+- name: Enabling RabbitMQ 
+  ansible.builtin.shell: sudo systemctl enable rabbitmq-server.service
+
 # - name: Starting {{COMPONENT}}
 #   ansible.builtin.systemd_service:
 #     state: started
