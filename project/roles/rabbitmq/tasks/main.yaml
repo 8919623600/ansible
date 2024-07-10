@@ -1,5 +1,10 @@
 # - name: Intallign Erlang
 #   ansible.builtin.shell: curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash
+- name: changed to root user
+  ansible.builtin.shell: sudo -i
+
+- name: update 
+  ansible.builtin.shell: yum update -y
 
 - name: Configuring {{COMPONENT}} repo 
   ansible.builtin.shell: yum -y install epel-release
