@@ -1,5 +1,3 @@
-# - name: Intallign Erlang
-#   ansible.builtin.shell: curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash
 - name: changed to root user
   ansible.builtin.shell: sudo -i
 
@@ -11,7 +9,7 @@
 
 - name: Install Erlang and Configure RabbitMQ Repo
   ansible.builtin.shell: cd ~ && sudo wget https://packages.erlang-solutions.com/erlang/rpm/centos/7/x86_64/esl-erlang_23.3.1-1~centos~7_amd64.rpm
-    # List of commands to execute sequentially
+  
 - name: Install Erlang 
   ansible.builtin.shell: sudo yum update
 
@@ -21,9 +19,6 @@
 - name: Install RabbitMQ Repo
   ansible.builtin.shell: sudo wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.8.19/rabbitmq-server-3.8.19-1.el7.noarch.rpm
     
-# - name: Install RabbitMQ 
-#   ansible.builtin.shell: sudo yum -y install rabbitmq-server*.rpm
-
 
 - name: Installing {{COMPONENT}}
   ansible.builtin.package:
@@ -36,12 +31,6 @@
 - name: Enabling RabbitMQ 
   ansible.builtin.shell: sudo systemctl enable rabbitmq-server.service
 
-# - name: Starting {{COMPONENT}}
-#   ansible.builtin.systemd_service:
-#     state: started
-#     name: rabbitmq-server
-#     enabled: yes 
-
 - name: Creating {{APPUSER}} user for {{COMPONENT}}
   community.rabbitmq.rabbitmq_user:
     user: roboshop
@@ -52,5 +41,3 @@
     write_priv: .*
     state: present
 
-# - name: Configuring Name
-#   ansible.builtin.shell: set-hostname {{COMPONENT}}
