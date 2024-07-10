@@ -33,5 +33,5 @@
     write_priv: .*
     state: present
 
-- name: Configuring Name
-  ansible.builtin.shell: set-hostname {{COMPONENT}}
+# - name: Configuring Name
+#   ansible.builtin.shell: set-hostname {{COMPONENT}}
