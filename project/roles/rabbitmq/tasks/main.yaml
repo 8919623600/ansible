@@ -7,9 +7,9 @@
 - name: Install Erlang and Configure RabbitMQ Repo
   ansible.builtin.shell:
     # List of commands to execute sequentially
-    - cd ~ && wget https://packages.erlang-solutions.com/erlang/rpm/centos/7/x86_64/esl-erlang_23.3.1-1~centos~7_amd64.rpm
-    - yum -y install esl-erlang*.rpm
-    - wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.8.19/rabbitmq-server-3.8.19-1.el7.noarch.rpm
+    - cd ~ && sudo wget https://packages.erlang-solutions.com/erlang/rpm/centos/7/x86_64/esl-erlang_23.3.1-1~centos~7_amd64.rpm
+    - sudo yum -y install esl-erlang*.rpm
+    - sudo wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.8.19/rabbitmq-server-3.8.19-1.el7.noarch.rpm
 
 - name: Installing {{COMPONENT}}
   ansible.builtin.package:
