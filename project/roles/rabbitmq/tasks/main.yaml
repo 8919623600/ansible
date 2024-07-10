@@ -1,8 +1,8 @@
 # - name: Intallign Erlang
 #   ansible.builtin.shell: curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash
 
-# - name: Configuring {{COMPONENT}} repo 
-#   ansible.builtin.shell: curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | bash
+- name: Configuring {{COMPONENT}} repo 
+  ansible.builtin.shell: yum -y install epel-release
 
 - name: Install Erlang and Configure RabbitMQ Repo
   ansible.builtin.shell: cd ~ && sudo wget https://packages.erlang-solutions.com/erlang/rpm/centos/7/x86_64/esl-erlang_23.3.1-1~centos~7_amd64.rpm
