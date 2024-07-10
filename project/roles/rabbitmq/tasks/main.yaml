@@ -16,7 +16,7 @@
   ansible.builtin.shell: sudo yum update
 
 - name: Install Erlang 
-  ansible.builtin.shell: sudo yum -y install esl-erlang-23.2.rpm
+  ansible.builtin.shell: sudo yum -y install esl-erlang*.rpm
  
 - name: Install RabbitMQ Repo
   ansible.builtin.shell: sudo wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.8.19/rabbitmq-server-3.8.19-1.el7.noarch.rpm
